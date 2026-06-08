@@ -1,0 +1,7 @@
+fastapi>=0.111
+uvicorn[standard]>=0.30
+numpy>=1.24
+Pillow>=10
+PyYAML>=6
+reportlab>=4
+

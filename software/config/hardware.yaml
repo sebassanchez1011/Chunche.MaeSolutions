@@ -1,0 +1,106 @@
+project:
+  name: Chunche
+  default_mode: sim
+  confidence_threshold: 0.65
+
+pca9685:
+  address: 0x40
+  frequency_hz: 50
+  channels: 16
+
+camera:
+  width: 1280
+  height: 720
+  rotation: 0
+  warmup_seconds: 1.0
+
+motion:
+  step_degrees: 2
+  step_delay_seconds: 0.015
+  default_move_seconds: 1.2
+
+servos:
+  base:
+    channel: 0
+    min_angle: 10
+    max_angle: 170
+    home_angle: 90
+    label: Base
+  hombro:
+    channel: 1
+    min_angle: 25
+    max_angle: 155
+    home_angle: 90
+    label: Hombro
+  codo:
+    channel: 2
+    min_angle: 20
+    max_angle: 160
+    home_angle: 90
+    label: Codo
+  muneca:
+    channel: 3
+    min_angle: 20
+    max_angle: 160
+    home_angle: 90
+    label: Muneca
+  rotacion_muneca:
+    channel: 4
+    min_angle: 0
+    max_angle: 180
+    home_angle: 90
+    label: Rotacion de muneca
+  pinza:
+    channel: 5
+    min_angle: 35
+    max_angle: 120
+    home_angle: 80
+    label: Pinza
+  modulo_superior:
+    channel: 6
+    min_angle: 0
+    max_angle: 180
+    home_angle: 90
+    label: Modulo superior
+
+poses:
+  home:
+    base: 90
+    hombro: 90
+    codo: 90
+    muneca: 90
+    rotacion_muneca: 90
+    pinza: 80
+    modulo_superior: 90
+  tools_cleaning:
+    base: 35
+    hombro: 88
+    codo: 100
+    muneca: 92
+    rotacion_muneca: 90
+    pinza: 105
+    modulo_superior: 90
+  tools_assist:
+    base: 145
+    hombro: 88
+    codo: 100
+    muneca: 92
+    rotacion_muneca: 90
+    pinza: 105
+    modulo_superior: 90
+  camera_scan_left:
+    modulo_superior: 45
+  camera_scan_center:
+    modulo_superior: 90
+  camera_scan_right:
+    modulo_superior: 135
+
+vision:
+  detector: heuristic
+  yolo_model_path: models/suciedad_superficial.pt
+  yolo_enabled: false
+  classes:
+    dirt: suciedad_superficial
+    dust: suciedad_superficial
+    stain: suciedad_superficial
+    surface_dirt: suciedad_superficial
