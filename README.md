@@ -8,7 +8,7 @@ Sistema robótico de asistencia para la conservación y restauración del patrim
 
 * Mathias Hidalgo Castro
 * Aylin Salazar Delgado
-* Mateo Sancho Dive
+* Sebastián Sánchez Duarte
 
 **Tutor:** Ph.D. Tomas de Camino Beck
 
